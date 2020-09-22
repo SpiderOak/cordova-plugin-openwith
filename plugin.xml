@@ -92,18 +92,20 @@ SOFTWARE.
             <clobbers target="cordova.openwith" />
         </js-module>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
-            <intent-filter>
-                <!-- category android:name="android.intent.category.BROWSABLE" / -->
-                <!-- See https://developer.android.com/guide/topics/manifest/data-element.html -->
-                <!-- Insert mime-types using the following format: <data android:mimeType="image/*" /> -->
-                $ANDROID_MIME_TYPES
-                <action android:name="android.intent.action.SEND" />
-                $ANDROID_EXTRA_ACTIONS
-                <!-- action android:name="android.intent.action.VIEW" / -->
-                <!-- action android:name="android.intent.action.SEND_MULTIPLE" / -->
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name=".SecondActivity">
+                <intent-filter>
+                    <!-- category android:name="android.intent.category.BROWSABLE" / -->
+                    <!-- See https://developer.android.com/guide/topics/manifest/data-element.html -->
+                    <!-- Insert mime-types using the following format: <data android:mimeType="image/*" /> -->
+                    $ANDROID_MIME_TYPES
+                    <action android:name="android.intent.action.SEND" />
+                    $ANDROID_EXTRA_ACTIONS
+                    <!-- action android:name="android.intent.action.VIEW" / -->
+                    <!-- action android:name="android.intent.action.SEND_MULTIPLE" / -->
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+            </activity>
         </config-file>
 
         <!-- Cordova >= 3.0.0 -->
