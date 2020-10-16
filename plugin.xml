@@ -86,7 +86,7 @@ SOFTWARE.
     <platform name="android">
 
         <preference name="ANDROID_MIME_TYPES" />
-        <preference name="ANDROID_EXTRA_ACTIONS" default=" " />
+        <preference name="ANDROID_EXTRA_ACTIONS" />
 
         <js-module src="www/openwith.js" name="openwith">
             <clobbers target="cordova.openwith" />
@@ -100,8 +100,8 @@ SOFTWARE.
                 $ANDROID_MIME_TYPES
                 <action android:name="android.intent.action.SEND" />
                 $ANDROID_EXTRA_ACTIONS
-                <!-- action android:name="android.intent.action.VIEW" / -->
-                <!-- action android:name="android.intent.action.SEND_MULTIPLE" / -->
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+                <!-- <action android:name="android.intent.action.SEND_MULTIPLE" /> -->
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </config-file>
